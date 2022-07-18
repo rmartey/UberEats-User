@@ -24,6 +24,7 @@ const Header = ({ restaurant }) => {
 					${restaurant.deliveryFee} &#8226; {restaurant.minDeliveryTime}-
 					{restaurant.maxDeliveryTime} minutes
 				</Text>
+				<Text style={styles.menuTitle}>Menu</Text>
 			</View>
 		</View>
 	);
