@@ -1,9 +1,12 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-//import restaurant from "../../../data/restaurants.json";
+
 import styles from "./styles";
 
+import { useNavigation } from "@react-navigation/native";
+
 const Header = ({ restaurant }) => {
+	const navigation = useNavigation();
 	return (
 		<View style={styles.page}>
 			<Image
@@ -13,6 +16,9 @@ const Header = ({ restaurant }) => {
 				style={styles.image}
 			/>
 			<Ionicons
+				onPress={() => {
+					navigation.goBack();
+				}}
 				name={"arrow-back-circle"}
 				style={styles.iconContainer}
 				size={45}
